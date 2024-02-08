@@ -1,0 +1,164 @@
+:root {
+  --afterEffects-background: #9999fd;
+  --afterEffects-button: #000a5b;
+  --afterEffects-button-color: #9999fd;
+  --afterEffects-title: #fff;
+  --afterEffects-sub-title: #fff;
+  --afterEffects-text: #cdccfe;
+  --commerce-background: #a10f02;
+  --commerce-button: red;
+  --commerce-button-color: #fff;
+  --commerce-title: #fff;
+  --commerce-sub-title: #fff;
+  --commerce-text: #fff;
+  --cloud-background: #f7f7f7;
+  --cloud-button: #000;
+  --cloud-button-color: #fff;
+  --cloud-title: #000;
+  --cloud-sub-title: #000;
+  --cloud-text: #000;
+  --illustrator-background: #f37021;
+  --illustrator-button: #330100;
+  --illustrator-button-color: #ff9a16;
+  --illustrator-title: #fff;
+  --illustrator-sub-title: #fff;
+  --illustrator-text: #330100;
+  --indesign-background: #ff3366;
+  --indesign-button: #49031f;
+  --indesign-button-color: #fff;
+  --indesign-title: #fff;
+  --indesign-sub-title: #fff;
+  --indesign-text: #f5f5f5;
+  --photoshop-background: #001d26;
+  --photoshop-button: #26c9fe;
+  --photoshop-button-color: #061e26;
+  --photoshop-title: #fff;
+  --photoshop-sub-title: #fff;
+  --photoshop-text: #f5f5f5;
+}
+
+.marvel-container.afterEffects button {
+  background-color: var(--afterEffects-button);
+  color: var(--afterEffects-button-color);
+}
+
+.marvel-container.afterEffects {
+  background-color: var(--afterEffects-background);
+}
+
+.marvel-container.afterEffects .title {
+  color: var(--afterEffects-title);
+}
+
+.marvel-container.afterEffects .sub-title {
+  color: var(--afterEffects-sub-title);
+}
+
+.marvel-container.afterEffects .text {
+  color: var(--afterEffects-text);
+}
+
+.marvel-container.commerce button {
+  background-color: var(--commerce-button);
+  color: var(--commerce-button-color);
+}
+
+.marvel-container.commerce {
+  background-color: var(--commerce-background);
+}
+
+.marvel-container.commerce .title {
+  color: var(--commerce-title);
+}
+
+.marvel-container.commerce .sub-title {
+  color: var(--commerce-sub-title);
+}
+
+.marvel-container.commerce .text {
+  color: var(--commerce-text);
+}
+
+.marvel-container.cloud button {
+  background-color: var(--cloud-button);
+  color: var(--cloud-button-color);
+}
+
+.marvel-container.cloud {
+  background-color: var(--cloud-background);
+}
+
+.marvel-container.cloud .title {
+  color: var(--cloud-title);
+}
+
+.marvel-container.cloud .sub-title {
+  color: var(--cloud-sub-title);
+}
+
+.marvel-container.cloud .text {
+  color: var(--cloud-text);
+}
+
+.marvel-container.illustrator button {
+  background-color: var(--illustrator-button);
+  color: var(--illustrator-button-color);
+}
+
+.marvel-container.illustrator {
+  background-color: var(--illustrator-background);
+}
+
+.marvel-container.illustrator .title {
+  color: var(--illustrator-title);
+}
+
+.marvel-container.illustrator .sub-title {
+  color: var(--illustrator-sub-title);
+}
+
+.marvel-container.illustrator .text {
+  color: var(--illustrator-text);
+}
+
+.marvel-container.indesign button {
+  background-color: var(--indesign-button);
+  color: var(--indesign-button-color);
+}
+
+.marvel-container.indesign {
+  background-color: var(--indesign-background);
+}
+
+.marvel-container.indesign .title {
+  color: var(--indesign-title);
+}
+
+.marvel-container.indesign .sub-title {
+  color: var(--indesign-sub-title);
+}
+
+.marvel-container.indesign .text {
+  color: var(--indesign-text);
+}
+
+.marvel-container.photoshop button {
+  background-color: var(--photoshop-button);
+  color: var(--photoshop-button-color);
+}
+
+.marvel-container.photoshop {
+  background-color: var(--photoshop-background);
+}
+
+.marvel-container.photoshop .title {
+  color: var(--photoshop-title);
+}
+
+.marvel-container.photoshop .sub-title {
+  color: var(--photoshop-sub-title);
+}
+
+.marvel-container.photoshop .text {
+  color: var(--photoshop-text);
+}

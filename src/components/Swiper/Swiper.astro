@@ -1,0 +1,158 @@
+---
+import "./style.css";
+import "./colors.css";
+const items = [
+  {
+    img: "public/iconos/After Effects.svg",
+    title: "After Effects",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#9999fd",
+    buttonBackground: "000a5b",
+    colorTitle: "",
+    colorP: "",
+  },
+  {
+    img: "public/iconos/Commerce.svg",
+    title: "Commerce",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#fa1200",
+    buttonBackground: "",
+    colorTitle: "",
+    colorP: "",
+  },
+  {
+    img: "public/iconos/Express.svg",
+    title: "Cloud",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#fff",
+    buttonBackground: "",
+    colorTitle: "",
+    colorP: "",
+  },
+  {
+    img: "public/iconos/Illustrator.svg",
+    title: "Illustrator",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#ff9a16",
+    buttonBackground: "",
+    colorTitle: "",
+    colorP: "",
+  },
+  {
+    img: "public/iconos/InDesign.svg",
+    title: "InDesign",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#ff3366",
+    buttonBackground: "",
+    colorTitle: "",
+    colorP: "",
+  },
+  {
+    img: "public/iconos/Photoshop.svg",
+    title: "Photoshop",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    background: "#061e26",
+    buttonBackground: "",
+    colorTitle: "",
+    colorP: "",
+  },
+];
+---
+
+<div class="marvel-container afterEffects">
+  <div class="row">
+    <div class="col-md-5 pr-md-0">
+      <div class="img-container">
+        {
+          items.map((item) => (
+            <div class="img-wrapper">
+              <img src={item.img} alt="" />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {
+            items.map((item) => (
+              <div class="swiper-slide p-md-5 p-3">
+                <div class="name">
+                  <div class="sub-title">
+                    <div class="text-wrapper">
+                      <span>Abobe</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                      <div class="title">
+                        <div class="text-wrapper">
+                          <span>{item.title}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="title">
+                    <div class="text-wrapper">
+                      <span>Movie Review</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                      <div class="text-wrapper">
+                        <span>
+                          <p class="text">{item.description}</p>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="purchase">
+                  <div class="year text">2014</div>
+                  <button class="purchase-btn">Purchase</button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY="
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+  integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw="
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+  integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+  integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4="
+  crossorigin="anonymous"></script>
+
+<script src="./script.js"></script>

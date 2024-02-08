@@ -1,0 +1,30 @@
+---
+interface Props {
+  title?: string;
+  theme?: string;
+}
+
+const { title = "Licencias Adobe", theme = "light" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme={theme}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+
+    <link rel="stylesheet" href="https://use.typekit.net/lcr1hmh.css" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style>
+  body {
+    font-family: "myriad-pro", sans-serif;
+  }
+</style>
