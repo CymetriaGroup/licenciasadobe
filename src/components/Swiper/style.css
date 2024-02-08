@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
 :root {
-  --font-family: "Roboto", sans-serif;
   --transition-time: 0.75s;
   --spiderman-light-background: #c71b22;
   --spiderman-dark-background: #9d1416;
@@ -17,7 +15,6 @@
 
 .marvel-container {
   width: 100%;
-  font-family: var(--font-family);
   border-radius: 10px;
   -webkit-transition: all ease var(--transition-time);
   transition: all ease var(--transition-time);
@@ -151,8 +148,12 @@
 
 .marvel-container .img-container {
   height: 100%;
+  width: 100%;
   position: relative;
   min-height: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .marvel-container .img-container .img-wrapper {
@@ -167,6 +168,11 @@
   padding-left: 48px;
   -webkit-transition: all ease var(--transition-time);
   transition: all ease var(--transition-time);
+}
+
+.marvel-container .img-container .img-wrapper img {
+  width: 250px;
+  height: 250px;
 }
 
 .marvel-container .img-container .img-wrapper.active {
@@ -292,7 +298,6 @@
 
 @media (min-width: 768px) {
   .marvel-container {
-    margin: 150px auto 10px;
     overflow: visible;
   }
   .marvel-container .name .sub-title {
