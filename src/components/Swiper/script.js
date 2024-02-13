@@ -1,10 +1,9 @@
 export default function init() {
     $(document).ready(function() {
-        // var classList = ['spiderman', 'ironman', 'captain'
-        // ];
         var classList = ['afterEffects', 'commerce', 'cloud', 'illustrator', 'indesign', 'photoshop'];
         var marvelHeroSlider = new Swiper('.marvel-container .swiper-container', {
-            autoplay: false,
+            autoplay: true,
+            loop: false,
             slidesPerView: 1,
             autoplay: {
                 delay: 5000,

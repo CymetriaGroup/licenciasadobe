@@ -1,7 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
+import Empresas from "../components/Empresas.astro";
+import VideoPreview from "../components/VideoPreview.astro";
 import Swiper from "../components/Swiper/Swiper.astro";
+import "./index.css";
 ---
 
 <Layout>
@@ -10,16 +13,13 @@ import Swiper from "../components/Swiper/Swiper.astro";
     <section class="section1">
       <div class="text-hero">
         <h1>
-          Somos más que un distribuidor platino de adobe, somos tu familia
-          creativa..
+          Somos más que un distribuidor platino de Adobe, somos una solución
+          integral de servicios.
         </h1>
       </div>
       <div class="spaceAnimation"></div>
-      <!-- <div class="animationHero">
-        <img src="/public/videoPreview.png" alt="hero" />
-      </div> -->
       <div class="animationHero">
-        <video src="./public/videos/banner3.mp4" autoplay loop></video>
+        <VideoPreview client:load={true} />
       </div>
     </section>
     <section class="section2">
@@ -28,58 +28,128 @@ import Swiper from "../components/Swiper/Swiper.astro";
         <Swiper />
       </div>
     </section>
+    <section class="section4">
+      <h2>Cursos exclusivos para clientes</h2>
+      <div class="parent">
+        <div class="div1">
+          <img src="/public/tools/illustrator.jpg" alt="illustrator" />
+        </div>
+        <div class="div2">
+          <img src="/public/tools/photoshop.jpg" alt="photoshop" />
+        </div>
+        <div class="div3">
+          <img src="/public/tools/premiere.jpg" alt="premiere" />
+        </div>
+      </div>
+      <a class="boton mt-[40px]"> Ver más cursos </a>
+    </section>
+    <section class="section5">
+      <h2>Eventos próximos</h2>
+      <a href="">
+        <img src="/public/banners/Plataforma.png" alt="eventosPróximos" />
+      </a>
+    </section>
+    <section class="section6">
+      <h2>Nuestros clientes</h2>
+      <Empresas />
+    </section>
+    <section class="section7">
+      <div>
+        <h2>Agenda una demo gratis</h2>
+        <p>
+          Selecciona en el calendario las fechas y horarios disponibles para
+          agendar una demo, donde resolveremos tus inquietudes y te entregaremos
+          una oferta comercial.
+        </p>
+      </div>
+      <div>
+        <div class="flex w-full gap-2">
+          <label class="input input-bordered flex items-center gap-2 w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+              ><path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
+              ></path></svg
+            >
+            <input type="text" class="grow" placeholder="Nombres" />
+          </label>
+          <label class="input input-bordered flex items-center gap-2 w-full">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+              ><path
+                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
+              ></path></svg
+            >
+            <input type="text" class="grow" placeholder="Apellidos" />
+          </label>
+        </div>
+        <label class="input input-bordered flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            class="w-4 h-4 opacity-70"
+            ><path
+              d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
+            ></path><path
+              d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
+            ></path></svg
+          >
+          <input type="text" class="grow" placeholder="Email" />
+        </label>
+        <label class="input input-bordered flex items-center gap-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="w-4 h-4 opacity-70"
+            fill="currentColor"
+          >
+            <path
+              d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z"
+              fill="currentColor"></path>
+          </svg>
+          <input type="text" class="grow" placeholder="Teléfono" />
+        </label>
+        <button class="boton mt-3">Cotizar</button>
+      </div>
+    </section>
+    <div class="rainbow-divider"></div>
+    <section class="section8">
+      <div class="flex flex-col h-full justify-between gap-5 w-full">
+        <img src="public/logo.png" alt="" />
+        <div>
+          <h5>Bogotá D.C, Co co</h5>
+          <h5>Carrera 21 N° 87 - 96 (POLO CLUB)</h5>
+          <h5>(1) 742-8084</h5>
+          <h5>(310) 774-3800</h5>
+        </div>
+        <p>Todos los derechos reservados</p>
+      </div>
+      <div class="w-full flex justify-center items-center">
+        <div>
+          Subscribete al Newsletter
+          <label class="input input-bordered flex items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 16 16"
+              fill="currentColor"
+              class="w-4 h-4 opacity-70"
+              ><path
+                d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
+              ></path><path
+                d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
+              ></path></svg
+            >
+            <input type="text" class="grow" placeholder="Email" />
+          </label>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
-<style>
-  .section1 {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 140px;
-  }
-  .text-hero {
-    width: 50%;
-    font-weight: bold;
-    font-style: italic;
-    font-size: 50px;
-    z-index: 1;
-  }
-  .animationHero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: center;
-  }
-  .animationHero video {
-    width: 100%;
-    height: auto;
-  }
-  .section2 {
-    background-color: #f5f5f5;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 60px;
-  }
-  .section2 h2 {
-    font-size: 44px;
-    font-weight: bold;
-    padding-bottom: 40px;
-  }
-  .swiperContainer {
-    width: 100%;
-    height: 450px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-</style>

@@ -1,0 +1,269 @@
+---
+const empresas = [
+  {
+    src: "/public/iconsCompanies/corferias-calendario-general.png",
+    alt: "Logo Corferias",
+    url: "https://corferias.com/es",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/channels-616_logo_MinTIC.png",
+    alt: "Logo Mintic",
+    url: "https://www.mintic.gov.co/",
+    width: "240",
+    height: "60",
+  },
+  {
+    src: "/public/iconsCompanies/Grupo_Sura_logo.svg.png",
+    alt: "Logo Grupo Sura",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/Noticias_Uno_logo.png",
+    alt: "Logo Noticias Uno",
+    url: "https://noticias.canal1.com.co/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-bancolombia1.png",
+    alt: "Logo Bancolombia",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "100",
+  },
+  {
+    src: "/public/iconsCompanies/logo-DANE.png",
+    alt: "Logo DANE",
+    url: "https://www.dane.gov.co/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-pensiones.png",
+    alt: "Logo Pensiones",
+    url: "https://www.pensionescolombia.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-personas__1_.png",
+    alt: "Logo Personas",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/Universidad_EAN_logo.svg.png",
+    alt: "Logo Univerisidad EAN",
+    url: "https://universidadean.edu.co/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/corferias-calendario-general.png",
+    alt: "Logo Corferias",
+    url: "https://corferias.com/es",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/channels-616_logo_MinTIC.png",
+    alt: "Logo Mintic",
+    url: "https://www.mintic.gov.co/",
+    width: "240",
+    height: "60",
+  },
+  {
+    src: "/public/iconsCompanies/Grupo_Sura_logo.svg.png",
+    alt: "Logo Grupo Sura",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/Noticias_Uno_logo.png",
+    alt: "Logo Noticias Uno",
+    url: "https://www.noticiasuno.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-bancolombia1.png",
+    alt: "Logo Bancolombia",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "100",
+  },
+  {
+    src: "/public/iconsCompanies/logo-DANE.png",
+    alt: "Logo DANE",
+    url: "https://www.dane.gov.co/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-pensiones.png",
+    alt: "Logo Pensiones",
+    url: "https://www.pensionescolombia.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/logo-personas__1_.png",
+    alt: "Logo Personas",
+    url: "https://www.gruposura.com/",
+    width: "200",
+    height: "80",
+  },
+  {
+    src: "/public/iconsCompanies/Universidad_EAN_logo.svg.png",
+    alt: "Logo Univerisidad EAN",
+    url: "https://universidadean.edu.co/",
+    width: "200",
+    height: "80",
+  },
+];
+---
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide-track">
+      {
+        empresas.map((empresa, idx) => (
+          <a
+            href={empresa.url}
+            target="_blank"
+            class="slide"
+            id={`slide-${idx}`}
+          >
+            <img
+              src={empresa.src}
+              height={empresa.height}
+              width={empresa.width}
+              alt={empresa.alt}
+            />
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Start Carousel Animation */
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-345px * 7));
+    }
+  }
+
+  @keyframes selected {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+  }
+
+  @keyframes notSelected {
+    0% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .slider-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+
+  .slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    padding: 0 0.5rem;
+    height: 120px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+
+  .slider::before,
+  .slider::after {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    content: "";
+    height: 120px;
+    position: absolute;
+    width: 60px;
+    z-index: 2;
+  }
+
+  .slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .slider::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll 35s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+    align-items: center;
+  }
+
+  .slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 390px;
+    margin: 0 2rem;
+    cursor: pointer;
+  }
+
+  .slide:hover {
+    cursor: pointer;
+    animation: selected 0.2s ease-in-out;
+    transform: scale(1.3);
+  }
+  .slide:not(:hover) {
+    animation: notSelected 0.2s ease-in-out;
+    transform: scale(1);
+  }
+
+  /* End Carousel Animation */
+</style>
+<script>
+  //stop animation and translatex in the current position when hover in the slider
+  const slider = document.querySelector(".slide-track");
+  slider.addEventListener("mouseover", () => {
+    slider.style.animationPlayState = "paused";
+  });
+  slider.addEventListener("mouseleave", () => {
+    slider.style.animationPlayState = "running";
+  });
+</script>
