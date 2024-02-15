@@ -6,6 +6,18 @@ export default function Calendly() {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => {
 		setOpen(true);
+		const form = document.getElementById('leadForm') as HTMLFormElement
+		const data = new FormData(form)
+		const api = 'https://licenciasadobe.com/php/mail2.php'
+		const options = {
+			method: 'POST',
+			body: data,
+		}
+		fetch(api, options)
+			.then(response => response.json())
+			.then(data => {
+				console.log(data)
+			})
 
 	}
 	useCalendlyEventListener({
@@ -49,7 +61,7 @@ export default function Calendly() {
 				{open ? <div className="App border ">
 					<InlineWidget url={url} />
 				</div> :
-					<form id="leadForm" name="leadForm" role="form" action="php/mail.php" method="post">
+					<form id="leadForm" name="leadForm" role="form" action="https://licenciasadobe.com/php/mail2.php" method="post">
 						<div className="flex w-full gap-2">
 							<label className="input input-bordered flex items-center gap-2 w-full">
 								<svg
@@ -60,7 +72,7 @@ export default function Calendly() {
 								><path
 									d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
 								></path></svg>
-								<input type="text" className="grow" placeholder="Nombres" />
+								<input type="text" name='nombre' className="grow" placeholder="Nombres" />
 							</label>
 							<label className="input input-bordered flex items-center gap-2 w-full">
 								<svg
@@ -71,7 +83,7 @@ export default function Calendly() {
 								><path
 									d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
 								></path></svg>
-								<input type="text" className="grow" placeholder="Apellidos" />
+								<input type="text" name="apellido" className="grow" placeholder="Apellidos" />
 							</label>
 						</div>
 						<label className="input input-bordered flex items-center gap-2">
@@ -85,7 +97,7 @@ export default function Calendly() {
 							></path><path
 								d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
 							></path></svg>
-							<input type="text" className="grow" placeholder="Email" />
+							<input type="email" name='email' className="grow" placeholder="Email" />
 						</label>
 						<label className="input input-bordered flex items-center gap-2">
 							<svg
@@ -98,7 +110,7 @@ export default function Calendly() {
 									d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z"
 									fill="currentColor"></path>
 							</svg>
-							<input type="text" className="grow" placeholder="Teléfono" />
+							<input type="tel" name='telefono' className="grow" placeholder="Teléfono" />
 						</label>
 						<button type='submit' onClick={() => { handleOpen() }} className="boton mt-3">Cotizar</button>
 					</form>}
