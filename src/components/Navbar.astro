@@ -1,7 +1,7 @@
 <div class="navbar">
   <img src="/Logotipo.png" alt="" />
   <div class="items">
-    <ul class="flex justify-between gap-5">
+    <ul class="flex justify-between gap-5 m-0">
       <li>
         <a class="button-navbar" href="#Inicio">Inicio</a>
       </li>
@@ -70,7 +70,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     top: 0;
     padding: 20px 110px;
     z-index: 1000;
@@ -95,11 +95,21 @@
   .btn {
     display: none;
   }
-  #itemsResponsive {
+  .drawer {
     display: none;
   }
-
-  @media (max-width: 768px) {
+  @media (max-width: 1180px) {
+    .navbar {
+      padding: 20px 60px;
+    }
+    .navbar img {
+      width: 250px;
+    }
+  }
+  @media (max-width: 970px) {
+    .drawer {
+      display: block;
+    }
     .navbar {
       padding: 20px 20px;
       align-items: center;
@@ -112,33 +122,6 @@
     }
     .btn {
       display: block;
-    }
-    #itemsResponsive {
-      display: block;
-      position: fixed;
-      top: 0;
-      right: -300px;
-      background-color: #f8f9fa;
-      width: 300px;
-      height: 100vh;
-    }
-
-    #itemsResponsive ul {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-    #itemsResponsive.active {
-      animation: activeSidebar 2s ease-in-out;
-      right: 0;
-    }
-  }
-  @keyframes activeSidebar {
-    0% {
-      right: -300px;
-    }
-    100% {
-      right: 0;
     }
   }
 </style>
