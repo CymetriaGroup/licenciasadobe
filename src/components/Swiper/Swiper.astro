@@ -2,44 +2,62 @@
 import "./style.css";
 import "./colors.css";
 
+const currentYear = new Date().getFullYear();
+
 const items = [
-  {
-    img: "public/iconos/After Effects.svg",
-    title: "After Effects",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    img: "public/iconos/Commerce.svg",
-    title: "Commerce",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
   {
     img: "public/iconos/Express.svg",
     title: "Cloud",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Con Adobe Cloud, tu creatividad no tiene límites. Accede a herramientas líderes y colabora en proyectos desde cualquier lugar. Innovación y productividad al alcance de tu mano.",
+    lema: "Tu creatividad, sin fronteras.",
   },
   {
-    img: "public/iconos/Illustrator.svg",
-    title: "Illustrator",
+    img: "public/iconos/Acrobat.svg",
+    title: "Document",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    img: "public/iconos/InDesign.svg",
-    title: "InDesign",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    img: "public/iconos/Photoshop.svg",
-    title: "Photoshop",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "Adobe Document transforma tu manejo de documentos: edita, firma y comparte digitalmente con facilidad y seguridad. Acelera tus procesos y trabaja desde cualquier lugar.",
+    lema: "Donde tus documentos cobran vida.",
   },
 ];
+// const items = [
+//   {
+//     img: "public/iconos/After Effects.svg",
+//     title: "After Effects",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+//   {
+//     img: "public/iconos/Commerce.svg",
+//     title: "Commerce",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+//   {
+//     img: "public/iconos/Express.svg",
+//     title: "Cloud",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+//   {
+//     img: "public/iconos/Illustrator.svg",
+//     title: "Illustrator",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+//   {
+//     img: "public/iconos/InDesign.svg",
+//     title: "InDesign",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+//   {
+//     img: "public/iconos/Photoshop.svg",
+//     title: "Photoshop",
+//     description:
+//       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+//   },
+// ];
 ---
 
 <div class="marvel-container afterEffects">
@@ -80,7 +98,7 @@ const items = [
                 <div class="overview">
                   <div class="title">
                     <div class="text-wrapper">
-                      <span>Movie Review</span>
+                      <span>{item.lema}</span>
                     </div>
                   </div>
                   <div class="row">
@@ -94,8 +112,8 @@ const items = [
                   </div>
                 </div>
                 <div class="purchase">
-                  <div class="year text">2014</div>
-                  <button class="purchase-btn">Purchase</button>
+                  <div class="year text">{currentYear}</div>
+                  <button class="purchase-btn">Cotiza ahora</button>
                 </div>
               </div>
             ))

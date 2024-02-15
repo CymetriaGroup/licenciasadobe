@@ -259,7 +259,7 @@ const empresas = [
 </style>
 <script>
   //stop animation and translatex in the current position when hover in the slider
-  const slider = document.querySelector(".slide-track");
+  const slider: any = document.querySelector(".slide-track");
   slider.addEventListener("mouseover", () => {
     slider.style.animationPlayState = "paused";
   });

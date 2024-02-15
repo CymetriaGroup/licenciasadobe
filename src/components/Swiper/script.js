@@ -1,6 +1,7 @@
 export default function init() {
-    $(document).ready(function() {
-        var classList = ['afterEffects', 'commerce', 'cloud', 'illustrator', 'indesign', 'photoshop'];
+    $(document).ready(function () {
+        var classList = ['cloud', 'commerce'];
+        // var classList = ['afterEffects', 'commerce', 'cloud', 'illustrator', 'indesign', 'photoshop'];
         var marvelHeroSlider = new Swiper('.marvel-container .swiper-container', {
             autoplay: true,
             loop: false,
@@ -16,7 +17,7 @@ export default function init() {
                 clickable: true
             },
             on: {
-                init: function() {
+                init: function () {
                     var index = this.activeIndex; // current slide index
                     $('.marvel-container')
                         .removeClass(classList)
@@ -28,7 +29,7 @@ export default function init() {
                         .addClass('active');
                 }
             }
-        }).on('slideChange', function() {
+        }).on('slideChange', function () {
             var index = this.activeIndex; // current slide index
             $('.marvel-container')
                 .removeClass(classList)
@@ -38,7 +39,7 @@ export default function init() {
                 .eq(index)
                 .addClass('active');
         });
-        $(window).on('resize', function() {
+        $(window).on('resize', function () {
             marvelHeroSlider.update();
         });
     });

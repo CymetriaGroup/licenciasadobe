@@ -1,0 +1,185 @@
+---
+import "./Video360.css";
+
+const elements = [
+  {
+    src: "/public/360/SVG/Recurso 10.svg",
+    text: "Acceso VIP a eventos",
+    description:
+      "Disfruta de experiencias exclusivas. Obtén entradas privilegiadas, asientos preferenciales y momentos inolvidables en tus eventos favoritos.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 9.svg",
+    text: "Soporte técnico 24/7",
+    description:
+      "Resolvemos problemas de manera rápida y eficiente para garantizar una experiencia sin contratiempos.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 8.svg",
+    text: "Cursos y talleres incluidos",
+    description:
+      "Amplía tus habilidades con nuestros cursos y talleres gratuitos, accesibles para todos.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 7.svg",
+    text: "Facturación en moneda local",
+    description:
+      "Simplificamos tu experiencia financiera con facturación en tu moneda local.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 6.svg",
+    text: "Atención personalizada",
+    description:
+      "Nuestro equipo dedicado está listo para escucharte y brindarte soluciones adaptadas.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 2.svg",
+    text: "Comunidad Adobe LATAM",
+    description:
+      "Únete a la vibrante Comunidad Adobe LATAM y conecta con profesionales creativos.",
+  },
+  {
+    src: "/public/360/SVG/Recurso 5.svg",
+    text: "Adobe Day en tu empresa",
+    description:
+      "Descubre innovaciones y potencia la creatividad de tu equipo con expertos de Adobe en tu empresa",
+  },
+  {
+    src: "/public/360/SVG/Recurso 4.svg",
+    text: "Extención de IVA",
+    description:
+      "Optimiza tus transacciones con nuestra opción de exención de IVA. ",
+  },
+  {
+    src: "/public/360/SVG/Recurso 3.svg",
+    text: "Gana puntos y redime obsequios",
+    description:
+      "Participa en nuestro programa de recompensas. Gana puntos con cada interacción y canjea por emocionantes obsequios.",
+  },
+];
+---
+
+<div class="contenedor">
+  <div class="circulo"></div>
+  <div class="circulo"></div>
+  <div class="circulo"></div>
+  <div class="circulo"></div>
+  <div class="tecnologies">
+    {
+      elements.map((element, idx) => (
+        <div id={"element-" + idx} class="division">
+          <span>
+            <img src={element.src} alt={element.text} />
+            <p>{element.text}</p>
+          </span>
+        </div>
+      ))
+    }
+  </div>
+  <div class="textos text-balance">
+    <div class="carta front">
+      <h1>X360</h1>
+      <p>ADOBE</p>
+    </div>
+    <div class="carta back">
+      <p id="info"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const elements = [
+    {
+      src: "/public/360/SVG/Recurso 10.svg",
+      text: "Acceso VIP a eventos",
+      description:
+        "Disfruta de experiencias exclusivas. Obtén entradas privilegiadas, asientos preferenciales y momentos inolvidables en tus eventos favoritos.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 9.svg",
+      text: "Soporte técnico 24/7",
+      description:
+        "Resolvemos problemas de manera rápida y eficiente para garantizar una experiencia sin contratiempos.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 8.svg",
+      text: "Cursos y talleres incluidos",
+      description:
+        "Amplía tus habilidades con nuestros cursos y talleres gratuitos, accesibles para todos.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 7.svg",
+      text: "Facturación en moneda local",
+      description:
+        "Simplificamos tu experiencia financiera con facturación en tu moneda local.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 6.svg",
+      text: "Atención personalizada",
+      description:
+        "Nuestro equipo dedicado está listo para escucharte y brindarte soluciones adaptadas.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 2.svg",
+      text: "Comunidad Adobe LATAM",
+      description:
+        "Únete a la vibrante Comunidad Adobe LATAM y conecta con profesionales creativos.",
+    },
+    {
+      src: "/public/360/SVG/Recurso 5.svg",
+      text: "Adobe Day en tu empresa",
+      description:
+        "Descubre innovaciones y potencia la creatividad de tu equipo con expertos de Adobe en tu empresa",
+    },
+    {
+      src: "/public/360/SVG/Recurso 4.svg",
+      text: "Extención de IVA",
+      description:
+        "Optimiza tus transacciones con nuestra opción de exención de IVA. ",
+    },
+    {
+      src: "/public/360/SVG/Recurso 3.svg",
+      text: "Gana puntos y redime obsequios",
+      description:
+        "Participa en nuestro programa de recompensas. Gana puntos con cada interacción y canjea por emocionantes obsequios.",
+    },
+  ];
+  document.addEventListener("DOMContentLoaded", () => {
+    const tecnologies = document.querySelector(".tecnologies");
+    const info = document.querySelector("#info");
+
+    // Establecer evento mouseenter para actualizar el texto de #info
+    document.querySelectorAll(".division span").forEach((span, idx) => {
+      span.addEventListener("mouseenter", () => {
+        info.textContent = elements[idx].description;
+      });
+    });
+
+    // Pausar todas las animaciones al entrar en .tecnologies
+    tecnologies.addEventListener("mouseenter", () => {
+      // Pausa las animaciones de las divisiones
+      document.querySelectorAll(".division").forEach((division: any) => {
+        division.style.animationPlayState = "paused";
+      });
+      // Pausa las animaciones de los span dentro de las divisiones
+      document.querySelectorAll(".division span").forEach((span: any) => {
+        span.style.animationPlayState = "paused";
+        // document.querySelector(".textos").classList.add("active");
+        document.querySelector(".textos").classList.add("active");
+      });
+    });
+
+    // Reanudar todas las animaciones al salir de .tecnologies
+    tecnologies.addEventListener("mouseleave", () => {
+      // Reanuda las animaciones de las divisiones
+      document.querySelectorAll(".division").forEach((division: any) => {
+        division.style.animationPlayState = "running";
+      });
+      // Reanuda las animaciones de los span dentro de las divisiones
+      document.querySelectorAll(".division span").forEach((span: any) => {
+        span.style.animationPlayState = "running";
+        document.querySelector(".textos").classList.remove("active");
+      });
+    });
+  });
+</script>

@@ -3,8 +3,10 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Empresas from "../components/Empresas.astro";
 import VideoPreview from "../components/VideoPreview.astro";
+import Video360 from "../components/Video360/Video360.astro";
 import Swiper from "../components/Swiper/Swiper.astro";
 import "./index.css";
+const year = new Date().getFullYear();
 ---
 
 <Layout>
@@ -27,6 +29,15 @@ import "./index.css";
       <div class="swiperContainer">
         <Swiper />
       </div>
+    </section>
+    <section class="section3">
+      <h2>X360 Adobe</h2>
+      <h3>
+        X360 Adobe es nuestro programa integral de servicios para clientes en
+        LATAM. Vive la experiencia 360 comprando o renovando tus licencias
+        Adobe.
+      </h3>
+      <Video360 />
     </section>
     <section class="section4">
       <h2>Cursos exclusivos para clientes</h2>
@@ -129,7 +140,6 @@ import "./index.css";
           <h5>(1) 742-8084</h5>
           <h5>(310) 774-3800</h5>
         </div>
-        <p>Todos los derechos reservados</p>
       </div>
       <div class="w-full flex justify-center items-center">
         <div>
@@ -151,5 +161,10 @@ import "./index.css";
         </div>
       </div>
     </section>
+    <footer class="flex justify-center pb-3 w-full">
+      &copy; {year}
+      <span class="mx-1 font-semibold">Lincencias Adobe</span>
+      {" "}Todos los derechos reservados.
+    </footer>
   </main>
 </Layout>
