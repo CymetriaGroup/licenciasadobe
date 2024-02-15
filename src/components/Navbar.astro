@@ -1,36 +1,21 @@
 <div class="navbar">
-  <img src="/logo.png" alt="" />
+  <img src="/Logotipo.png" alt="" />
   <div>
     <ul class="flex justify-between gap-5">
       <li>
-        <a
-          class="btn btn-ghost hover:btn-error hover:text-white px-[30px] rounded font-normal"
-          href="#Inicio">Inicio</a
-        >
+        <a class="button-navbar" href="#Inicio">Inicio</a>
       </li>
       <li>
-        <a
-          class="btn btn-ghost hover:btn-error hover:text-white px-[30px] rounded font-normal"
-          href="#Adobe360">Adobe x 360</a
-        >
+        <a class="button-navbar" href="#Adobe360">Adobe x 360</a>
       </li>
       <li>
-        <a
-          class="btn btn-ghost hover:btn-error hover:text-white px-[30px] rounded font-normal"
-          href="#Cursos">Cursos</a
-        >
+        <a class="button-navbar" href="#Cursos">Cursos</a>
       </li>
       <li>
-        <a
-          class="btn btn-ghost hover:btn-error hover:text-white px-[30px] rounded font-normal"
-          href="#Eventos">Eventos</a
-        >
+        <a class="button-navbar" href="#Eventos">Eventos</a>
       </li>
       <li>
-        <a
-          class="btn btn-ghost hover:btn-error hover:text-white px-[30px] rounded font-normal"
-          href="#DEMO">DEMO</a
-        >
+        <a class="button-navbar" href="#DEMO">DEMO</a>
       </li>
     </ul>
   </div>
@@ -42,6 +27,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     top: 0;
     padding: 20px 110px;
     z-index: 1000;
@@ -50,5 +36,16 @@
   .navbar img {
     width: 350px;
     height: auto;
+  }
+  .button-navbar {
+    color: #000;
+    background-color: #e9e9e9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .button-navbar:hover {
+    color: #fff;
+    background-color: red;
   }
 </style>
