@@ -6,14 +6,14 @@ const currentYear = new Date().getFullYear();
 
 const items = [
   {
-    img: "public/iconos/Express.svg",
+    img: "/iconos/Express.svg",
     title: "Cloud",
     description:
       "Con Adobe Cloud, tu creatividad no tiene límites. Accede a herramientas líderes y colabora en proyectos desde cualquier lugar. Innovación y productividad al alcance de tu mano.",
     lema: "Tu creatividad, sin fronteras.",
   },
   {
-    img: "public/iconos/Acrobat.svg",
+    img: "/iconos/Acrobat.svg",
     title: "Document",
     description:
       "Adobe Document transforma tu manejo de documentos: edita, firma y comparte digitalmente con facilidad y seguridad. Acelera tus procesos y trabaja desde cualquier lugar.",
@@ -113,7 +113,9 @@ const items = [
                 </div>
                 <div class="purchase">
                   <div class="year text">{currentYear}</div>
-                  <button class="purchase-btn">Cotiza ahora</button>
+                  <a href="#DEMO">
+                    <button class="purchase-btn">Cotiza ahora</button>
+                  </a>
                 </div>
               </div>
             ))

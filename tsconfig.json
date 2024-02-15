@@ -1,6 +1,10 @@
 {
   "extends": "astro/tsconfigs/base",
   "compilerOptions": {
-    "types": ["jquery"]
+    "types": [
+      "jquery"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   }
 }
