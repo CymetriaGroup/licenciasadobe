@@ -57,8 +57,8 @@ export default function Calendly() {
 					una oferta comercial.
 				</p>
 			</div>
-			<div>
-				{open ? <div className="App border ">
+			<div className='w-full' >
+				{open ? <div className="App border w-full">
 					<InlineWidget url={url} />
 				</div> :
 					<form id="leadForm" name="leadForm" role="form" action="https://licenciasadobe.com/php/mail2.php" method="post">
@@ -114,7 +114,6 @@ export default function Calendly() {
 						</label>
 						<button type='submit' onClick={() => { handleOpen() }} className="boton mt-3">Cotizar</button>
 					</form>}
-
 			</div>
 		</>
 	)
