@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useCalendlyEventListener, InlineWidget, PopupButton } from "react-calendly";
 import toast, { Toaster } from 'react-hot-toast';
+import './Calendly.css'
 export default function Calendly() {
 
 	const [open, setOpen] = React.useState(false);
@@ -48,7 +49,6 @@ export default function Calendly() {
 	return (
 		<>
 			<Toaster />
-
 			<div>
 				<h2>Agenda una demo gratis</h2>
 				<p>
@@ -62,7 +62,7 @@ export default function Calendly() {
 					<InlineWidget url={url} />
 				</div> :
 					<form id="leadForm" name="leadForm" role="form" action="https://licenciasadobe.com/php/mail2.php" method="post">
-						<div className="flex w-full gap-2">
+						<div className="inputs2 sm:gap-0 w-full lg:gap-2">
 							<label className="input input-bordered flex items-center gap-2 w-full">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"

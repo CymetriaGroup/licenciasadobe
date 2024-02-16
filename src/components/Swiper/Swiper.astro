@@ -5,20 +5,22 @@ import "./colors.css";
 const currentYear = new Date().getFullYear();
 
 const items = [
-	{
-		img: "/iconos/Express.svg",
-		alt: "Adobe Creative Cloud",
-		title: "Cloud",
-		description: "Con Adobe Cloud, tu creatividad no tiene límites. Accede a herramientas líderes y colabora en proyectos desde cualquier lugar. Innovación y productividad al alcance de tu mano.",
-		lema: "Tu creatividad, sin fronteras.",
-	},
-	{
-		img: "/iconos/Acrobat.svg",
-		title: "Document",
-		alt: "Adobe Document",
-		description: "Adobe Document transforma tu manejo de documentos: edita, firma y comparte digitalmente con facilidad y seguridad. Acelera tus procesos y trabaja desde cualquier lugar.",
-		lema: "Donde tus documentos cobran vida.",
-	},
+  {
+    img: "/iconos/Express.svg",
+    alt: "Adobe Creative Cloud",
+    title: "Cloud",
+    description:
+      "Con Adobe Cloud, tu creatividad no tiene límites. Accede a herramientas líderes y colabora en proyectos desde cualquier lugar. Innovación y productividad al alcance de tu mano.",
+    lema: "Tu creatividad, sin fronteras.",
+  },
+  {
+    img: "/iconos/Acrobat.svg",
+    title: "Document",
+    alt: "Adobe Document",
+    description:
+      "Adobe Document transforma tu manejo de documentos: edita, firma y comparte digitalmente con facilidad y seguridad. Acelera tus procesos y trabaja desde cualquier lugar.",
+    lema: "Donde tus documentos cobran vida.",
+  },
 ];
 // const items = [
 //   {
@@ -61,76 +63,95 @@ const items = [
 ---
 
 <div class="marvel-container afterEffects">
-	<div class="row">
-		<div class="col-md-5 pr-md-0">
-			<div class="img-container">
-				{
-					items.map((item) => (
-						<div class="img-wrapper">
-							<img src={item.img} alt={item.alt} />
-						</div>
-					))
-				}
-			</div>
-		</div>
-		<div class="col-md-7">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					{
-						items.map((item) => (
-							<div class="swiper-slide p-md-5 p-3">
-								<div class="name">
-									<div class="sub-title">
-										<div class="text-wrapper">
-											<span>Abobe</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-11 offset-md-1">
-											<div class="title">
-												<div class="text-wrapper">
-													<span>{item.title}</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="overview">
-									<div class="title">
-										<div class="text-wrapper">
-											<span>{item.lema}</span>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-11 offset-md-1">
-											<div class="text-wrapper">
-												<span>
-													<p class="text">{item.description}</p>
-												</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="purchase">
-									<div class="year text">{currentYear}</div>
-									<a href="#DEMO">
-										<button class="purchase-btn">Cotiza ahora</button>
-									</a>
-								</div>
-							</div>
-						))
-					}
-				</div>
-				<!-- pagination -->
-				<div class="swiper-pagination"></div>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-md-5 pr-md-0">
+      <div class="img-container">
+        {
+          items.map((item) => (
+            <div class="img-wrapper">
+              <img src={item.img} alt={item.alt} />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="col-md-7">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {
+            items.map((item) => (
+              <div class="swiper-slide p-md-5 p-3">
+                <div class="name">
+                  <div class="sub-title">
+                    <div class="text-wrapper">
+                      <span>Abobe</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-11 ">
+                      <div class="title">
+                        <div class="text-wrapper">
+                          <span>{item.title}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="overview">
+                  <div class="title">
+                    <div class="text-wrapper">
+                      <span>{item.lema}</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-11">
+                      <div class="text-wrapper">
+                        <span>
+                          <p class="text">{item.description}</p>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="purchase">
+                  <div class="year text">{currentYear}</div>
+                  <a href="#DEMO">
+                    <button class="purchase-btn">Cotiza ahora</button>
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <!-- pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
 </div>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js" integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4=" crossorigin="anonymous"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY="
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"
+  integrity="sha256-DBYdrj7BxKM3slMeqBVWX2otx7x4eqoHRJCsSDJ0Nxw="
+  crossorigin="anonymous"
+/>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+  integrity="sha256-fzFFyH01cBVPYzl16KT40wqjhgPtq6FFUB6ckN2+GGw="
+  crossorigin="anonymous"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"
+  integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4="
+  crossorigin="anonymous"></script>
 
 <script src="./script.js"></script>

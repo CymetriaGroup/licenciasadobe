@@ -1,112 +1,128 @@
 <div class="navbar">
-	<img src="/Logotipo.png" alt="" />
-	<div class="items">
-		<ul class="flex justify-between gap-5 m-0">
-			<li>
-				<a class="button-navbar" href="#Inicio" accesskey="1">Inicio</a>
-			</li>
-			<li>
-				<a class="button-navbar" href="#Adobe360">Adobe x 360</a>
-			</li>
-			<li>
-				<a class="button-navbar" href="#Cursos">Cursos</a>
-			</li>
-			<li>
-				<a class="button-navbar" href="#Eventos">Eventos</a>
-			</li>
-			<li>
-				<a class="button-navbar" href="#DEMO">DEMO</a>
-			</li>
-		</ul>
-	</div>
-	<div class="drawer w-[auto] drawer-end">
-		<input id="my-drawer" type="checkbox" class="drawer-toggle" />
-		<div class="drawer-content">
-			<label id="changeSidebar" for="my-drawer" class="drawer-button btn btn-square btn-ghost">
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-			</label>
-		</div>
-		<div class="drawer-side overflow-hidden">
-			<label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-			<ul class="menu p-4 h-screen bg-base-200 gap-5 text-base-content">
-				<li>
-					<a class="button-navbar" href="#Inicio">Inicio</a>
-				</li>
-				<li>
-					<a class="button-navbar" href="#Adobe360">Adobe x 360</a>
-				</li>
-				<li>
-					<a class="button-navbar" href="#Cursos">Cursos</a>
-				</li>
-				<li>
-					<a class="button-navbar" href="#Eventos">Eventos</a>
-				</li>
-				<li>
-					<a class="button-navbar" href="#DEMO">DEMO</a>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <img src="/Logotipo.png" alt="" />
+  <div class="items">
+    <ul class="flex justify-between gap-5 m-0">
+      <li>
+        <a class="button-navbar" href="#Inicio" accesskey="1">Inicio</a>
+      </li>
+      <li>
+        <a class="button-navbar" href="#Adobe360">Adobe x 360</a>
+      </li>
+      <li>
+        <a class="button-navbar" href="#Cursos">Cursos</a>
+      </li>
+      <li>
+        <a class="button-navbar" href="#Eventos">Eventos</a>
+      </li>
+      <li>
+        <a class="button-navbar" href="#DEMO">DEMO</a>
+      </li>
+    </ul>
+  </div>
+  <div class="drawer w-[auto] drawer-end">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-content">
+      <label
+        id="changeSidebar"
+        for="my-drawer"
+        class="drawer-button btn btn-square btn-ghost"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          class="inline-block w-5 h-5 stroke-current"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path></svg
+        >
+      </label>
+    </div>
+    <div class="drawer-side overflow-hidden">
+      <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"
+      ></label>
+      <ul class="menu p-4 h-screen bg-base-200 gap-5 text-base-content">
+        <li>
+          <a class="button-navbar" href="#Inicio">Inicio</a>
+        </li>
+        <li>
+          <a class="button-navbar" href="#Adobe360">Adobe x 360</a>
+        </li>
+        <li>
+          <a class="button-navbar" href="#Cursos">Cursos</a>
+        </li>
+        <li>
+          <a class="button-navbar" href="#Eventos">Eventos</a>
+        </li>
+        <li>
+          <a class="button-navbar" href="#DEMO">DEMO</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 <style>
-	.navbar {
-		background-color: #f8f9fa;
-		width: 100%;
-		position: fixed;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		top: 0;
-		padding: 20px 110px;
-		z-index: 1000;
-		box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-	}
-	.navbar img {
-		width: 350px;
-		height: auto;
-	}
-	.button-navbar {
-		color: #000;
-		background-color: #e9e9e9;
-		text-decoration: none;
-		padding: 10px 20px;
-		border-radius: 5px;
-	}
-	.button-navbar:hover {
-		color: #fff;
-		background-color: red;
-	}
+  .navbar {
+    background-color: #f8f9fa;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    padding: 20px 60px;
+    z-index: 1000;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+  .navbar img {
+    width: 350px;
+    height: auto;
+    z-index: 1;
+  }
+  .button-navbar {
+    color: #000;
+    background-color: #e9e9e9;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  .button-navbar:hover {
+    color: #fff;
+    background-color: red;
+  }
 
-	.btn {
-		display: none;
-	}
-	.drawer {
-		display: none;
-	}
-	@media (max-width: 1180px) {
-		.navbar {
-			padding: 20px 60px;
-		}
-		.navbar img {
-			width: 250px;
-		}
-	}
-	@media (max-width: 970px) {
-		.drawer {
-			display: block;
-		}
-		.navbar {
-			padding: 20px 20px;
-			align-items: center;
-		}
-		.navbar img {
-			width: 300px;
-		}
-		.items {
-			display: none;
-		}
-		.btn {
-			display: block;
-		}
-	}
+  .btn {
+    display: none;
+  }
+  .drawer {
+    display: none;
+  }
+  @media (max-width: 1180px) {
+    .navbar {
+      padding: 20px 60px;
+    }
+    .navbar img {
+      width: 250px;
+    }
+  }
+  @media (max-width: 970px) {
+    .drawer {
+      display: block;
+    }
+    .navbar {
+      padding: 20px 20px;
+      align-items: center;
+    }
+    .navbar img {
+      width: 300px;
+    }
+    .items {
+      display: none;
+    }
+    .btn {
+      display: block;
+    }
+  }
 </style>

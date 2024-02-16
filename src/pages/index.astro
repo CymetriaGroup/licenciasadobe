@@ -6,6 +6,8 @@ import Video360 from "../components/Video360/Video360.astro";
 import Swiper from "../components/Swiper/Swiper.astro";
 import Calendly from "../components/Calendly/Calendly";
 import "./index.css";
+import "./tipografias.css";
+
 const year = new Date().getFullYear();
 ---
 
@@ -19,13 +21,10 @@ const year = new Date().getFullYear();
           integral de servicios.
         </h1>
       </div>
-      <div class="spaceAnimation"></div>
-      <div class="animationHero">
-        <video preload="auto" autoplay loop muted playsinline>
-          <source src="/videos/banner3.webm" type="video/webm" />
-          <source src="/videos/banner3.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <video preload="auto" autoplay loop muted playsinline>
+        <source src="/videos/bannerCuadrado.webm" type="video/webm" />
+        <source src="/videos/bannerCuadrado.mp4" type="video/mp4" />
+      </video>
     </section>
     <section class="section2">
       <h2>Productos destacados</h2>
@@ -35,11 +34,11 @@ const year = new Date().getFullYear();
     </section>
     <section class="section3" id="Adobe360">
       <h2>X360 Adobe</h2>
-      <p>
+      <h3>
         X360 Adobe es nuestro programa integral de servicios para clientes en
-        LATAM. Vive la experiencia 360 comprando o renovando tus licencias
+        LATAM. <br /> Vive la experiencia 360 comprando o renovando tus licencias
         Adobe.
-      </p>
+      </h3>
       <Video360 />
     </section>
     <section class="section4" id="Cursos">
@@ -60,6 +59,12 @@ const year = new Date().getFullYear();
       </a>
     </section>
     <section class="section5" id="Eventos">
+      <!-- <div class="background326">
+        <video preload="auto" autoplay loop muted playsinline>
+          <source src="/videos/background326.webm" type="video/webm" />
+          <source src="/videos/background326.mp4" type="video/mp4" />
+        </video>
+      </div> -->
       <h2>Eventos próximos</h2>
       <img
         src="/banners/Banner adobe.png"
@@ -76,7 +81,7 @@ const year = new Date().getFullYear();
     </section>
     <div class="rainbow-divider"></div>
     <section class="section8">
-      <div class="flex flex-col h-full justify-between gap-5 w-full">
+      <div class="textos">
         <img src="/Logotipo.png" alt="" />
         <div>
           <h5>Bogotá D.C, Co co</h5>
@@ -105,10 +110,10 @@ const year = new Date().getFullYear();
         </div>
       </div>
     </section>
-    <footer class="flex justify-center pb-3 w-full">
+    <footer class="text-center pb-3 w-full">
       &copy; {year}
       <span class="mx-1 font-semibold">Licencias Adobe</span>
-      {" "}Todos los derechos reservados.
+      <br />Todos los derechos reservados.
     </footer>
   </main>
 </Layout>

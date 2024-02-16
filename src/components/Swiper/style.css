@@ -84,7 +84,6 @@ img-wrapper.marvel-container .name .sub-title {
 .marvel-container .overview .title {
   margin-bottom: 1rem;
   position: relative;
-  padding-left: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,12 +124,13 @@ img-wrapper.marvel-container .name .sub-title {
 }
 
 .marvel-container .purchase .purchase-btn {
+  font-weight: 600;
   padding: 10px 40px;
   text-transform: uppercase;
   outline: 0;
   margin: 0;
   border: 0;
-  border-radius: 4px;
+  border-radius: 30px;
   -webkit-transform: translateY(150%);
   transform: translateY(150%);
   -webkit-transition: all ease var(--transition-time);

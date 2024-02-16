@@ -1,3 +1,189 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate0 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes rotate40 {
+  from {
+    transform: rotateZ(40deg);
+  }
+  to {
+    transform: rotateZ(400deg);
+  }
+}
+
+@keyframes rotate80 {
+  from {
+    transform: rotateZ(80deg);
+  }
+  to {
+    transform: rotateZ(440deg);
+  }
+}
+
+@keyframes rotate120 {
+  from {
+    transform: rotateZ(120deg);
+  }
+  to {
+    transform: rotateZ(480deg);
+  }
+}
+
+@keyframes rotate160 {
+  from {
+    transform: rotateZ(160deg);
+  }
+  to {
+    transform: rotateZ(520deg);
+  }
+}
+
+@keyframes rotate200 {
+  from {
+    transform: rotateZ(200deg);
+  }
+  to {
+    transform: rotateZ(560deg);
+  }
+}
+
+@keyframes rotate240 {
+  from {
+    transform: rotateZ(240deg);
+  }
+  to {
+    transform: rotateZ(600deg);
+  }
+}
+
+@keyframes rotate280 {
+  from {
+    transform: rotateZ(280deg);
+  }
+  to {
+    transform: rotateZ(640deg);
+  }
+}
+
+@keyframes rotate320 {
+  from {
+    transform: rotateZ(320deg);
+  }
+  to {
+    transform: rotateZ(680deg);
+  }
+}
+
+@keyframes rotateSpanInverse0 {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
+
+@keyframes rotateSpanInverse40 {
+  from {
+    transform: rotateZ(-40deg);
+  }
+  to {
+    transform: rotateZ(-400deg);
+  }
+}
+
+@keyframes rotateSpanInverse80 {
+  from {
+    transform: rotateZ(-80deg);
+  }
+  to {
+    transform: rotateZ(-440deg);
+  }
+}
+
+@keyframes rotateSpanInverse120 {
+  from {
+    transform: rotateZ(-120deg);
+  }
+  to {
+    transform: rotateZ(-480deg);
+  }
+}
+
+@keyframes rotateSpanInverse160 {
+  from {
+    transform: rotateZ(-160deg);
+  }
+  to {
+    transform: rotateZ(-520deg);
+  }
+}
+
+@keyframes rotateSpanInverse200 {
+  from {
+    transform: rotateZ(-200deg);
+  }
+  to {
+    transform: rotateZ(-560deg);
+  }
+}
+
+@keyframes rotateSpanInverse240 {
+  from {
+    transform: rotateZ(-240deg);
+  }
+  to {
+    transform: rotateZ(-600deg);
+  }
+}
+
+@keyframes rotateSpanInverse280 {
+  from {
+    transform: rotateZ(-280deg);
+  }
+  to {
+    transform: rotateZ(-640deg);
+  }
+}
+
+@keyframes rotateSpanInverse320 {
+  from {
+    transform: rotateZ(-320deg);
+  }
+  to {
+    transform: rotateZ(-680deg);
+  }
+}
+
+@keyframes itemSelected {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes itemsNotSelected {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .contenedor {
   position: relative;
   width: 100%;
@@ -264,188 +450,63 @@
   }
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .contenedor .tecnologies {
+    width: 370px;
+    height: 370px;
   }
-}
-
-@keyframes rotate0 {
-  from {
-    transform: rotateZ(0deg);
+  .contenedor .tecnologies:before {
+    width: 165px;
+    height: 165px;
   }
-  to {
-    transform: rotateZ(360deg);
+  .division span {
+    font-size: 8px;
+    width: 60px;
   }
-}
-
-@keyframes rotate40 {
-  from {
-    transform: rotateZ(40deg);
+  .division span img {
+    width: 25px;
+    height: 25px;
   }
-  to {
-    transform: rotateZ(400deg);
+  .contenedor .textos {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
   }
-}
-
-@keyframes rotate80 {
-  from {
-    transform: rotateZ(80deg);
+  .contenedor .textos.active {
+    width: 165px;
+    height: 165px;
   }
-  to {
-    transform: rotateZ(440deg);
+  .contenedor .textos h3 {
+    font-size: 1.5em;
   }
-}
-
-@keyframes rotate120 {
-  from {
-    transform: rotateZ(120deg);
+  .contenedor .textos p {
+    font-size: 0.8em;
   }
-  to {
-    transform: rotateZ(480deg);
+  #info {
+    font-size: 12px;
   }
-}
-
-@keyframes rotate160 {
-  from {
-    transform: rotateZ(160deg);
+  .contenedor .circulo {
+    width: 120px;
+    height: 120px;
   }
-  to {
-    transform: rotateZ(520deg);
+  .contenedor .circulo:nth-child(1) {
+    height: 155px;
+    width: 155px;
   }
-}
-
-@keyframes rotate200 {
-  from {
-    transform: rotateZ(200deg);
+  .contenedor .circulo:nth-child(2) {
+    height: 145px;
+    width: 145px;
   }
-  to {
-    transform: rotateZ(560deg);
+  .contenedor .circulo:nth-child(3) {
+    height: 135px;
+    width: 135px;
   }
-}
-
-@keyframes rotate240 {
-  from {
-    transform: rotateZ(240deg);
+  .contenedor .circulo:nth-child(4) {
+    height: 125px;
+    width: 125px;
   }
-  to {
-    transform: rotateZ(600deg);
-  }
-}
-
-@keyframes rotate280 {
-  from {
-    transform: rotateZ(280deg);
-  }
-  to {
-    transform: rotateZ(640deg);
-  }
-}
-
-@keyframes rotate320 {
-  from {
-    transform: rotateZ(320deg);
-  }
-  to {
-    transform: rotateZ(680deg);
-  }
-}
-
-@keyframes rotateSpanInverse0 {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(-360deg);
-  }
-}
-
-@keyframes rotateSpanInverse40 {
-  from {
-    transform: rotateZ(-40deg);
-  }
-  to {
-    transform: rotateZ(-400deg);
-  }
-}
-
-@keyframes rotateSpanInverse80 {
-  from {
-    transform: rotateZ(-80deg);
-  }
-  to {
-    transform: rotateZ(-440deg);
-  }
-}
-
-@keyframes rotateSpanInverse120 {
-  from {
-    transform: rotateZ(-120deg);
-  }
-  to {
-    transform: rotateZ(-480deg);
-  }
-}
-
-@keyframes rotateSpanInverse160 {
-  from {
-    transform: rotateZ(-160deg);
-  }
-  to {
-    transform: rotateZ(-520deg);
-  }
-}
-
-@keyframes rotateSpanInverse200 {
-  from {
-    transform: rotateZ(-200deg);
-  }
-  to {
-    transform: rotateZ(-560deg);
-  }
-}
-
-@keyframes rotateSpanInverse240 {
-  from {
-    transform: rotateZ(-240deg);
-  }
-  to {
-    transform: rotateZ(-600deg);
-  }
-}
-
-@keyframes rotateSpanInverse280 {
-  from {
-    transform: rotateZ(-280deg);
-  }
-  to {
-    transform: rotateZ(-640deg);
-  }
-}
-
-@keyframes rotateSpanInverse320 {
-  from {
-    transform: rotateZ(-320deg);
-  }
-  to {
-    transform: rotateZ(-680deg);
-  }
-}
-
-@keyframes itemSelected {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes itemsNotSelected {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
+  .division span {
+    top: 56%;
+    left: 25px;
   }
 }
