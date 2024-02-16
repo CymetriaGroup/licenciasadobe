@@ -61,7 +61,7 @@ export default function Calendly() {
 				{open ? <div className="App border w-full">
 					<InlineWidget url={url} />
 				</div> :
-					<form id="leadForm" name="leadForm" role="form" action="https://licenciasadobe.com/php/mail2.php" method="post">
+					<form id="leadForm">
 						<div className="inputs2 sm:gap-0 w-full lg:gap-2">
 							<label className="input input-bordered flex items-center gap-2 w-full">
 								<svg
