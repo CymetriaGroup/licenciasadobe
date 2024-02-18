@@ -79,7 +79,7 @@
   .navbar img {
     width: 350px;
     height: auto;
-    z-index: 1;
+    z-index: 0 !important;
   }
   .button-navbar {
     color: #000;
@@ -123,6 +123,11 @@
     }
     .btn {
       display: block;
+    }
+  }
+  @media (max-width: 500px) {
+    .navbar img {
+      width: 270px;
     }
   }
 </style>

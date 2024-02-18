@@ -8,14 +8,14 @@ const items = [
   {
     img: "/iconos/Express.svg",
     alt: "Adobe Creative Cloud",
-    title: "Cloud",
+    title: "Adobe Creative Cloud",
     description:
       "Con Adobe Cloud, tu creatividad no tiene límites. Accede a herramientas líderes y colabora en proyectos desde cualquier lugar. Innovación y productividad al alcance de tu mano.",
     lema: "Tu creatividad, sin fronteras.",
   },
   {
     img: "/iconos/Acrobat.svg",
-    title: "Document",
+    title: "Adobe Document",
     alt: "Adobe Document",
     description:
       "Adobe Document transforma tu manejo de documentos: edita, firma y comparte digitalmente con facilidad y seguridad. Acelera tus procesos y trabaja desde cualquier lugar.",
@@ -82,16 +82,13 @@ const items = [
             items.map((item) => (
               <div class="swiper-slide p-md-5 p-3">
                 <div class="name">
-                  <div class="sub-title">
-                    <div class="text-wrapper">
-                      <span>Abobe</span>
-                    </div>
-                  </div>
                   <div class="row">
                     <div class="col-md-11 ">
                       <div class="title">
                         <div class="text-wrapper">
-                          <span>{item.title}</span>
+                          <h3 style="font-size:1.8rem !important;">
+                            {item.title}
+                          </h3>
                         </div>
                       </div>
                     </div>
@@ -100,7 +97,7 @@ const items = [
                 <div class="overview">
                   <div class="title">
                     <div class="text-wrapper">
-                      <span>{item.lema}</span>
+                      <p>{item.lema}</p>
                     </div>
                   </div>
                   <div class="row">
@@ -154,4 +151,4 @@ const items = [
   integrity="sha256-4sETKhh3aSyi6NRiA+qunPaTawqSMDQca/xLWu27Hg4="
   crossorigin="anonymous"></script>
 
-<script src="./script.js"></script>
+<script src="./swiper.js"></script>

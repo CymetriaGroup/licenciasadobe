@@ -352,20 +352,23 @@
   cursor: pointer;
 }
 
-.division span:hover {
+/* .division span:hover {
   & img,
   p {
     animation: itemSelected 0.2s ease-in-out forwards;
     transform: scale(1.1);
   }
+} */
+.division span:hover img,
+p {
+  animation: itemSelected 0.2s ease-in-out forwards;
+  transform: scale(1.1);
 }
 
-.division span:not(:hover) {
-  & img,
-  p {
-    animation: itemsNotSelected 0.2s ease-in-out forwards;
-    transform: scale(1);
-  }
+.division span:not(:hover) img,
+p {
+  animation: itemsNotSelected 0.2s ease-in-out forwards;
+  transform: scale(1);
 }
 
 .division span img {
@@ -377,7 +380,7 @@
 
 /* Aplicar rotación inicial y animación */
 
-.division:nth-child(1) {
+/* .division:nth-child(1) {
   animation: rotate0 60s linear infinite;
   transform: rotate(0deg);
   & span {
@@ -385,7 +388,6 @@
     transform: rotate(0deg);
   }
 }
-
 .division:nth-child(2) {
   transform: rotate(40deg);
   animation: rotate40 60s linear infinite;
@@ -448,6 +450,93 @@
   & span {
     animation: rotateSpanInverse320 60s linear infinite;
   }
+} */
+.division:nth-child(1) {
+  animation: rotate0 60s linear infinite;
+  transform: rotate(0deg);
+}
+.division:nth-child(1) span {
+  animation: rotateSpanInverse0 60s linear infinite;
+  transform: rotate(0deg);
+}
+
+.division:nth-child(2) {
+  animation: rotate40 60s linear infinite;
+  transform: rotate(40deg);
+}
+.division:nth-child(2) span {
+  animation: rotateSpanInverse40 60s linear infinite;
+  transform: rotate(40deg);
+}
+
+.division:nth-child(3) {
+  animation: rotate80 60s linear infinite;
+  transform: rotate(80deg);
+}
+
+.division:nth-child(3) span {
+  animation: rotateSpanInverse80 60s linear infinite;
+  transform: rotate(80deg);
+}
+
+.division:nth-child(4) {
+  animation: rotate120 60s linear infinite;
+  transform: rotate(120deg);
+}
+
+.division:nth-child(4) span {
+  animation: rotateSpanInverse120 60s linear infinite;
+  transform: rotate(120deg);
+}
+
+.division:nth-child(5) {
+  animation: rotate160 60s linear infinite;
+  transform: rotate(160deg);
+}
+
+.division:nth-child(5) span {
+  animation: rotateSpanInverse160 60s linear infinite;
+  transform: rotate(160deg);
+}
+
+.division:nth-child(6) {
+  animation: rotate200 60s linear infinite;
+  transform: rotate(200deg);
+}
+
+.division:nth-child(6) span {
+  animation: rotateSpanInverse200 60s linear infinite;
+  transform: rotate(200deg);
+}
+
+.division:nth-child(7) {
+  animation: rotate240 60s linear infinite;
+  transform: rotate(240deg);
+}
+
+.division:nth-child(7) span {
+  animation: rotateSpanInverse240 60s linear infinite;
+  transform: rotate(240deg);
+}
+
+.division:nth-child(8) {
+  animation: rotate280 60s linear infinite;
+  transform: rotate(280deg);
+}
+
+.division:nth-child(8) span {
+  animation: rotateSpanInverse280 60s linear infinite;
+  transform: rotate(280deg);
+}
+
+.division:nth-child(9) {
+  animation: rotate320 60s linear infinite;
+  transform: rotate(320deg);
+}
+
+.division:nth-child(9) span {
+  animation: rotateSpanInverse320 60s linear infinite;
+  transform: rotate(320deg);
 }
 
 @media (max-width: 768px) {

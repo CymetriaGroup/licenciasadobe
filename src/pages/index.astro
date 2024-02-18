@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar.astro";
 import Empresas from "../components/Empresas.astro";
 import Video360 from "../components/Video360/Video360.astro";
 import Swiper from "../components/Swiper/Swiper.astro";
-import Calendly from "../components/Calendly/Calendly";
+import Cotiza from "../components/Cotiza/Cotiza.tsx";
 import "./index.css";
 import "./tipografias.css";
 
@@ -17,9 +17,10 @@ const year = new Date().getFullYear();
     <section id="Inicio" class="section1">
       <div class="text-hero">
         <h1>
-          Somos más que un distribuidor platino de Adobe, somos una solución
-          integral de servicios.
+          Somos más que un Distribuidor Platino de Adobe <br /> Una Solución Integral
+          de Servicios, Licencias y Productos
         </h1>
+        <a href="#DEMO" class="boton"> Cotiza ahora </a>
       </div>
       <video preload="auto" autoplay loop muted playsinline>
         <source src="/videos/bannerCuadrado.webm" type="video/webm" />
@@ -45,13 +46,52 @@ const year = new Date().getFullYear();
       <h2>Cursos exclusivos para clientes</h2>
       <div class="parent">
         <div class="div1">
-          <img src="/tools/illustrator.jpg" alt="illustrator" />
+          <picture>
+            <source
+              srcset="/tools/WEBP/illustrator.webp"
+              height="auto"
+              width="auto"
+              type="image/webp"
+            />
+            <img
+              src="/tools/JPG/illustrator.jpg"
+              height="auto"
+              width="auto"
+              alt="illustrator licenciasadobe.com"
+            />
+          </picture>
         </div>
         <div class="div2">
-          <img src="/tools/photoshop.jpg" alt="photoshop" />
+          <picture>
+            <source
+              srcset="/tools/WEBP/photoshop.webp"
+              height="auto"
+              width="auto"
+              type="image/webp"
+            />
+            <img
+              src="/tools/JPG/photoshop.jpg"
+              height="auto"
+              width="auto"
+              alt="photoshop licenciasadobe.com"
+            />
+          </picture>
         </div>
         <div class="div3">
-          <img src="/tools/premiere.jpg" alt="premiere" />
+          <picture>
+            <source
+              srcset="/tools/WEBP/premiere.webp"
+              height="auto"
+              width="auto"
+              type="image/webp"
+            />
+            <img
+              src="/tools/JPG/premiere.jpg"
+              height="auto"
+              width="auto"
+              alt="premiere licenciasadobe.com"
+            />
+          </picture>
         </div>
       </div>
       <a href="https://cursosadobe.com" target="_blank" class="boton mt-[40px]">
@@ -59,12 +99,6 @@ const year = new Date().getFullYear();
       </a>
     </section>
     <section class="section5" id="Eventos">
-      <!-- <div class="background326">
-        <video preload="auto" autoplay loop muted playsinline>
-          <source src="/videos/background326.webm" type="video/webm" />
-          <source src="/videos/background326.mp4" type="video/mp4" />
-        </video>
-      </div> -->
       <h2>Eventos próximos</h2>
       <img
         src="/banners/Banner adobe.png"
@@ -77,7 +111,7 @@ const year = new Date().getFullYear();
       <Empresas />
     </section>
     <section class="section7" id="DEMO">
-      <Calendly client:only />
+      <Cotiza />
     </section>
     <div class="rainbow-divider"></div>
     <section class="section8">
@@ -117,3 +151,25 @@ const year = new Date().getFullYear();
     </footer>
   </main>
 </Layout>
+
+<script>
+  const form = document.getElementById("leadForm") as HTMLFormElement;
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    handleOpen();
+  });
+
+  const handleOpen = () => {
+    const data = new FormData(form);
+    const api = "https://licenciasadobe.com/php/mail2.php";
+    const options = {
+      method: "POST",
+      body: data,
+    };
+    fetch(api, options)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
+</script>

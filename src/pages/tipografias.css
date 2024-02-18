@@ -1,47 +1,30 @@
-/* imports tipografy otf files bold, regular, serif,extrabold.. */
-
 @font-face {
   font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanBlack.otf") format("opentype");
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanBold.otf") format("opentype");
+  src: url("/fonts/AdobeCleanBold.otf") format("opentype");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanRegular.otf") format("opentype");
+  src: url("/fonts/AdobeCleanRegular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanLight.otf") format("opentype");
+  src: url("/fonts/AdobeCleanLight.otf") format("opentype");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanSemiLight.otf") format("opentype");
+  src: url("/fonts/AdobeCleanSemiLight.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
 }
-
-@font-face {
-  font-family: "Adobe Clean";
-  src: url("../../public/fonts/AdobeCleanRegular.otf") format("opentype");
-  font-weight: 500;
-  font-style: normal;
-}
-
 body {
   font-family: "Adobe Clean", sans-serif !important;
   font-weight: 300 !important;
